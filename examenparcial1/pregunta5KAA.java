@@ -97,7 +97,7 @@ class pregunta5KAA{
     }
    public static void pregunta4KAA() {
     double edad;
-    char genero;
+    char sexo;
     System.out.println("Ingrese la edad del paciente:");
     edad=st.nextDouble();
 
@@ -108,13 +108,13 @@ class pregunta5KAA{
         System.out.println("Vacuna que le corresponde es A");
     } 
     else if (edad>=16 && edad<=69)
-    System.out.println("Ingrese el genero (M=Masculino o F=Femenino):");
-    genero=st.next().charAt(0);
+    System.out.println("Ingrese el sexo M=Masculino o F=Femenino:");
+    sexo=st.next().charAt(0);
     
-     if (genero=='m'){
+     if (sexo=='m'){
         System.out.println("Vacuna que le corresponde es A");}
     
-        if (genero=='f'){
+        if (sexo=='f'){
     System.out.println("Vacuna que le corresponde es B");
     }
     
