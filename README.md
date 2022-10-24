@@ -9,5 +9,5 @@
 <li> BISLEYN ARCE APAZA </li> 
 <ul>
   
- <img src="qwerty.jpg">
+ <img src="https://github.com/kennyaapro23/EXAMEN_POO/blob/main/ExamenGrupal/src/main/resources/LG2.jpg">
 
