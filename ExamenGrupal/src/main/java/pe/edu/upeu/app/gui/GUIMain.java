@@ -1,3 +1,7 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
 package pe.edu.upeu.app.gui;
 
 import java.awt.BorderLayout;
@@ -14,16 +18,11 @@ import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JTabbedPane;
 
-/**
- *
- * @author LABORATORIO_2
- */
 public class GUIMain extends JFrame {
 
     JMenuBar menuBar;
     JMenu menu1;
     JMenuItem jmI1;
-    JMenuItem jmI2;
     JTabbedPane jtpane;
     JPanel jp;
     JScrollPane scrollPane;
@@ -35,24 +34,16 @@ public class GUIMain extends JFrame {
         menuBar = new JMenuBar();
         menu1 = new JMenu("Archivo");
         jmI1 = new JMenuItem("Abrir");
-        
-        jmI2 = new JMenuItem("Adm. Cliente");
-        menu1.add(jmI1);
-        menu1.add(jmI2);
         menuBar.add(menu1);
+        menu1.add(jmI1);
         menu1 = new JMenu("Ver");
         menuBar.add(menu1);
-        //this.add(menuBar);
-        
-        //Accion de abbrir JTabbedPane
+        this.add(menuBar);
         MenuItemListener menuItemListener = new MenuItemListener();
-        jmI1.addActionListener(menuItemListener);//accion
-        jmI2.addActionListener(menuItemListener);
-        jtpane = new JTabbedPane();
+        jmI1.addActionListener(menuItemListener);
         this.getContentPane().add(BorderLayout.NORTH, menuBar);
-//this.getContentPane().add(BorderLayout.CENTER, jtpane);
+        //this.getContentPane().add(BorderLayout.CENTER, jtpane);
         this.setVisible(true);
-
     }
 
     class MenuItemListener implements ActionListener {
@@ -60,12 +51,16 @@ public class GUIMain extends JFrame {
         @Override
         public void actionPerformed(ActionEvent e) {
             System.out.println("pasa por aqui");
-             jtpane.removeAll();
             Container contai = GUIMain.this.getContentPane();
             if (e.getSource() == jmI1) {
-               
-                jp = new JPanel();
-                jtpane.add("Prueba", jp);
+                jtpane = new JTabbedPane();
+                MainCliente mc = new MainCliente();
+                
+                //jtpane.add("Gestionar cliente", mc);
+                scrollPane = new JScrollPane(mc);
+                scrollPane.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_AS_NEEDED);
+                scrollPane.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED);
+                jtpane.add("Adm. Cliente", scrollPane);
                 jp = new JPanel();
                 jtpane.add("Preuba 2", jp);
                 JPanel pp = new JPanel();
@@ -82,20 +77,6 @@ public class GUIMain extends JFrame {
                 jtpane.add("visit", pp1);
                 jtpane.add("ver", pp2);
                 jtpane.setTabLayoutPolicy(JTabbedPane.SCROLL_TAB_LAYOUT);
-                contai.add(BorderLayout.CENTER, jtpane);
-                contai.invalidate();
-                contai.validate();
-                contai.repaint();
-            }
-
-            if (e.getSource() == jmI2) {
-                System.out.println("verrr");
-                MainCliente mc = new MainCliente();
-                scrollPane = new JScrollPane(mc);
-                scrollPane.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_AS_NEEDED);
-                scrollPane.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED);
-                jtpane.add("Adm. Cliente", scrollPane);
-                
                 contai.add(BorderLayout.CENTER, jtpane);
                 contai.invalidate();
                 contai.validate();

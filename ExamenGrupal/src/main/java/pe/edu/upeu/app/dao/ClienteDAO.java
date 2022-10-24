@@ -17,37 +17,35 @@ import pe.edu.upeu.app.dao.conx.Conn;
 import pe.edu.upeu.app.modelo.ClienteTO;
 import pe.edu.upeu.app.util.ErrorLogger;
 
-/**
- *
- * @author LABORATORIO_2
- */
-public class ClienteDao implements ClienteDaoI {
+public class ClienteDAO implements ClienteDaoI {
 
     Statement stmt = null;
     Vector columnNames;
     Vector visitdata;
     Connection connection = Conn.connectSQLite();
     static PreparedStatement ps;
-    static ErrorLogger log = new ErrorLogger(ClienteDao.class.getName());
+    static ErrorLogger log = new ErrorLogger(ClienteDAO.class.getName());
     ResultSet rs = null;
 
-    public ClienteDao() {
+    public ClienteDAO() {
         columnNames = new Vector();
         visitdata = new Vector();
     }
 
     @Override
+    //Crear cliente
     public int create(ClienteTO d) {
         int rsId = 0;
         String[] returns = {"dniruc"};
-        String sql = "INSERT INTO cliente(dniruc, nombrers, tipo) "
-                + "VALUES(?,?,?)";
+        String sql = "INSERT INTO cliente(dniruc, nombrers, tipo, telefono) "
+                + "VALUES(?,?,?,?)";
         int i = 0;
         try {
             ps = connection.prepareStatement(sql, returns);
             ps.setString(++i, d.getDniruc());
-            ps.setString(++i, d.getNombrers());
+            ps.setString(++i, d.getNombresrs());
             ps.setString(++i, d.getTipo());
+            ps.setString(++i, d.getTelefono());
             rsId = ps.executeUpdate();// 0 no o 1 si commit
             try ( ResultSet rs = ps.getGeneratedKeys()) {
                 if (rs.next()) {
@@ -63,6 +61,7 @@ public class ClienteDao implements ClienteDaoI {
     }
 
     @Override
+    //Actualizar cliente
     public int update(ClienteTO d) {
         System.out.println("actualizar d.getDniruc: " + d.getDniruc());
         int comit = 0;
@@ -73,9 +72,10 @@ public class ClienteDao implements ClienteDaoI {
         int i = 0;
         try {
             ps = connection.prepareStatement(sql);
-            ps.setString(++i, d.getNombrers());
+            ps.setString(++i, d.getNombresrs());
             ps.setString(++i, d.getTipo());
             ps.setString(++i, d.getDniruc());
+            ps.setString(++i, d.getTelefono());
             comit = ps.executeUpdate();
         } catch (SQLException ex) {
             log.log(Level.SEVERE, "update", ex);
@@ -84,6 +84,7 @@ public class ClienteDao implements ClienteDaoI {
     }
 
     @Override
+    //Borrar cliente
     public int delete(String id) throws Exception {
         int comit = 0;
         String sql = "DELETE FROM cliente WHERE dniruc = ?";
@@ -108,8 +109,8 @@ public class ClienteDao implements ClienteDaoI {
     }
 
     @Override
-    public List listarClientes() {
-        List<ClienteTO> listarclientes = new ArrayList();
+    public List<ClienteTO> listarClientes() {
+        List<ClienteTO> listarclientes = new ArrayList<>();
         String sql = "SELECT * FROM cliente";
         try {
             connection = new Conn().connectSQLite();
@@ -118,8 +119,9 @@ public class ClienteDao implements ClienteDaoI {
             while (rs.next()) {
                 ClienteTO cli = new ClienteTO();
                 cli.setDniruc(rs.getString("dniruc"));
-                cli.setNombrers(rs.getString("nombrers"));
+                cli.setNombresrs(rs.getString("nombrers"));
                 cli.setTipo(rs.getString("tipo"));
+                cli.setTelefono(rs.getString("telefono"));
                 listarclientes.add(cli);
             }
         } catch (SQLException e) {
@@ -139,8 +141,9 @@ public class ClienteDao implements ClienteDaoI {
             rs = ps.executeQuery();
             if (rs.next()) {
                 cliente.setDniruc(rs.getString("dniruc"));
-                cliente.setNombrers(rs.getString("nombrers"));
+                cliente.setNombresrs(rs.getString("nombrers"));
                 cliente.setTipo(rs.getString("tipo"));
+                cliente.setTelefono(rs.getString("telefono"));
             }
         } catch (SQLException e) {
             System.out.println(e.toString());
@@ -152,5 +155,4 @@ public class ClienteDao implements ClienteDaoI {
     public void reportarCliente() {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
-
 }

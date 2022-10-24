@@ -9,7 +9,7 @@ import pe.edu.upeu.app.modelo.ClienteTO;
 
 /**
  *
- * @author LABORATORIO_2
+ * @author HP
  */
 public interface ClienteDaoI {
 
@@ -21,7 +21,7 @@ public interface ClienteDaoI {
 
     public List<ClienteTO> listCmb(String filter);
 
-    public List listarClientes();
+    public List<ClienteTO> listarClientes();
 
     public ClienteTO buscarClientes(String dni);
 
