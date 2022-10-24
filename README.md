@@ -1,6 +1,8 @@
-# EXAMENS
-
-jhoel hairto apaza quispe  login diseño and crud
-kenny aquino amachi crud = media parte and crud
-fran franklin calizaya apaza connect = mysqlite
-bisleyn arce apaza = DAO
+PROYECTO PROGRAMACION
+PARTICIPANTES
+Arce Mayta Efrain Nayder (MainCliente)
+Turpo Cauna Jose Samuel (Extras)
+Ito Huanca Franck Lenin (MainCliente)
+Quispe Huarilloclla Jhosef Anthony (Login)
+(Usuario root)
+(Contraseña root)
