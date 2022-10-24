@@ -8,10 +8,11 @@ import lombok.Data;
 
 /**
  *
- * @author Usuario
+ * @author ASUS
  */
-@Data 
-public class ClienteTO {
-    public String dniruc, nombresrs, tipo;
+@Data
+public class UsuarioTO {
+    
+    String nombre, apellido, correo, usuario, contrasenia;
 
 }

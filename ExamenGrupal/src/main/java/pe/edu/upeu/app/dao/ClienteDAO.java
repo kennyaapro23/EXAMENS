@@ -19,19 +19,19 @@ import pe.edu.upeu.app.util.ErrorLogger;
 
 /**
  *
- * @author Usuario
+ * @author LABORATORIO_2
  */
-public class ClienteDAO implements ClienteDaoI {
+public class ClienteDao implements ClienteDaoI {
 
     Statement stmt = null;
     Vector columnNames;
     Vector visitdata;
     Connection connection = Conn.connectSQLite();
     static PreparedStatement ps;
-    static ErrorLogger log = new ErrorLogger(ClienteDAO.class.getName());
+    static ErrorLogger log = new ErrorLogger(ClienteDao.class.getName());
     ResultSet rs = null;
 
-    public ClienteDAO() {
+    public ClienteDao() {
         columnNames = new Vector();
         visitdata = new Vector();
     }
@@ -46,7 +46,7 @@ public class ClienteDAO implements ClienteDaoI {
         try {
             ps = connection.prepareStatement(sql, returns);
             ps.setString(++i, d.getDniruc());
-            ps.setString(++i, d.getNombresrs());
+            ps.setString(++i, d.getNombrers());
             ps.setString(++i, d.getTipo());
             rsId = ps.executeUpdate();// 0 no o 1 si commit
             try ( ResultSet rs = ps.getGeneratedKeys()) {
@@ -56,7 +56,7 @@ public class ClienteDAO implements ClienteDaoI {
                 rs.close();
             }
         } catch (SQLException ex) {
-//System.err.println("create:" + ex.toString());
+            //System.err.println("create:" + ex.toString());
             log.log(Level.SEVERE, "create", ex);
         }
         return rsId;
@@ -73,7 +73,7 @@ public class ClienteDAO implements ClienteDaoI {
         int i = 0;
         try {
             ps = connection.prepareStatement(sql);
-            ps.setString(++i, d.getNombresrs());
+            ps.setString(++i, d.getNombrers());
             ps.setString(++i, d.getTipo());
             ps.setString(++i, d.getDniruc());
             comit = ps.executeUpdate();
@@ -93,7 +93,7 @@ public class ClienteDAO implements ClienteDaoI {
             comit = ps.executeUpdate();
         } catch (SQLException ex) {
             log.log(Level.SEVERE, "delete", ex);
-// System.err.println("NO del " + ex.toString());
+            // System.err.println("NO del " + ex.toString());
             throw new Exception("Detalle:" + ex.getMessage());
         }
         return comit;
@@ -112,13 +112,13 @@ public class ClienteDAO implements ClienteDaoI {
         List<ClienteTO> listarclientes = new ArrayList();
         String sql = "SELECT * FROM cliente";
         try {
-            //connection = new Conn().connectSQLite();
+            connection = new Conn().connectSQLite();
             ps = connection.prepareStatement(sql);
             rs = ps.executeQuery();
             while (rs.next()) {
                 ClienteTO cli = new ClienteTO();
                 cli.setDniruc(rs.getString("dniruc"));
-                cli.setNombresrs(rs.getString("nombrers"));
+                cli.setNombrers(rs.getString("nombrers"));
                 cli.setTipo(rs.getString("tipo"));
                 listarclientes.add(cli);
             }
@@ -139,7 +139,7 @@ public class ClienteDAO implements ClienteDaoI {
             rs = ps.executeQuery();
             if (rs.next()) {
                 cliente.setDniruc(rs.getString("dniruc"));
-                cliente.setNombresrs(rs.getString("nombrers"));
+                cliente.setNombrers(rs.getString("nombrers"));
                 cliente.setTipo(rs.getString("tipo"));
             }
         } catch (SQLException e) {
