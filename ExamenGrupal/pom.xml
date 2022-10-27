@@ -9,7 +9,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>18</maven.compiler.source>
         <maven.compiler.target>18</maven.compiler.target>
-        <exec.mainClass>pe.edu.upeu.app.SysVentasGUIG1</exec.mainClass>
+        <exec.mainClass>pe.edu.upeu.app.SysVentasGUIG3</exec.mainClass>
     </properties>
     
     <dependencies>
@@ -43,7 +43,7 @@
                         <manifest>
                             <addClasspath>true</addClasspath>
                             <classpathPrefix>lib/</classpathPrefix>
-                            <mainClass>pe.edu.upeu.app.SysVentasGUIG1</mainClass>
+                            <mainClass>pe.edu.upeu.app.SysVentasGUIG3</mainClass>
                         </manifest>
                     </archive>
                 </configuration>
