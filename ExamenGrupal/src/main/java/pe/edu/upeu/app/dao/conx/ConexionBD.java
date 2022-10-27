@@ -16,8 +16,8 @@ public class ConexionBD {
     
     
     public static String url = "jdbc:sqlite:data/db_ventas.db";
-    public static String Usuario = "root";
-    public static String Contraseña = "root";
+    public static String Usuario = "skeree";
+    public static String Contraseña = "rskeree";
     public static String clase = "org.sqlite.JDBC";
     
     public static Connection conectar() {
