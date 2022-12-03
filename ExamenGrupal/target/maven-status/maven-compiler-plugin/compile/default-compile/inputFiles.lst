@@ -1,8 +1,13 @@
+D:\MI GITHUB\EXAMEN_POO\ExamenGrupal\src\main\java\pe\edu\upeu\app\modelo\MarcaTO.java
+D:\MI GITHUB\EXAMEN_POO\ExamenGrupal\src\main\java\pe\edu\upeu\app\modelo\VentaDetalleTO.java
 D:\MI GITHUB\EXAMEN_POO\ExamenGrupal\src\main\java\pe\edu\upeu\app\dao\conx\ConexionBD.java
+D:\MI GITHUB\EXAMEN_POO\ExamenGrupal\src\main\java\pe\edu\upeu\app\modelo\CarritoTO.java
+D:\MI GITHUB\EXAMEN_POO\ExamenGrupal\src\main\java\pe\edu\upeu\app\modelo\CategoriaTO.java
 D:\MI GITHUB\EXAMEN_POO\ExamenGrupal\src\main\java\pe\edu\upeu\app\modelo\UsuarioTO.java
 D:\MI GITHUB\EXAMEN_POO\ExamenGrupal\src\main\java\pe\edu\upeu\app\gui\GUIMain.java
 D:\MI GITHUB\EXAMEN_POO\ExamenGrupal\src\main\java\pe\edu\upeu\app\util\ErrorLogger.java
 D:\MI GITHUB\EXAMEN_POO\ExamenGrupal\src\main\java\pe\edu\upeu\app\dao\conx\Conn.java
+D:\MI GITHUB\EXAMEN_POO\ExamenGrupal\src\main\java\pe\edu\upeu\app\modelo\VentaTO.java
 D:\MI GITHUB\EXAMEN_POO\ExamenGrupal\src\main\java\pe\edu\upeu\app\modelo\ClienteTO.java
 D:\MI GITHUB\EXAMEN_POO\ExamenGrupal\src\main\java\pe\edu\upeu\app\dao\ClienteDAO.java
 D:\MI GITHUB\EXAMEN_POO\ExamenGrupal\src\main\java\pe\edu\upeu\app\gui\MainCliente.java
@@ -10,5 +15,6 @@ D:\MI GITHUB\EXAMEN_POO\ExamenGrupal\src\main\java\pe\edu\upeu\app\SysVentasGUIG
 D:\MI GITHUB\EXAMEN_POO\ExamenGrupal\src\main\java\pe\edu\upeu\app\gui\Login.java
 D:\MI GITHUB\EXAMEN_POO\ExamenGrupal\src\main\java\pe\edu\upeu\app\dao\ClienteDaoI.java
 D:\MI GITHUB\EXAMEN_POO\ExamenGrupal\src\main\java\pe\edu\upeu\app\component\PanelBorder.java
+D:\MI GITHUB\EXAMEN_POO\ExamenGrupal\src\main\java\pe\edu\upeu\app\modelo\ProductoTO.java
 D:\MI GITHUB\EXAMEN_POO\ExamenGrupal\src\main\java\pe\edu\upeu\app\util\MsgBox.java
 D:\MI GITHUB\EXAMEN_POO\ExamenGrupal\src\main\java\pe\edu\upeu\app\util\UtilsX.java

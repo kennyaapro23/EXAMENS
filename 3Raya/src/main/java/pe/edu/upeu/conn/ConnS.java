@@ -47,7 +47,7 @@ public class ConnS {
             synchronized (ConnS.class) {
                 if (connection == null) {
                     try {
-                        String dbUrl = "jdbc:sqlite:data/db_3rayadb?foreign_keys=on;";
+                        String dbUrl = "jdbc:sqlite:data/db_3raya.db?foreign_keys=on;";
                         connection = DriverManager.getConnection(dbUrl);
                     } catch (SQLException e) {
                         e.printStackTrace();
@@ -57,5 +57,5 @@ public class ConnS {
         }
         return connection;
     }
-
+    
 }
