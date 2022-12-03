@@ -106,6 +106,7 @@ public class Inicio extends javax.swing.JFrame {
         txtJugador1.setText("");
         txtJugador2.setText("");
         txtJugador1.requestFocus();
+        casillas.setText("");
 
     }
     
