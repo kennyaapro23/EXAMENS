@@ -39,9 +39,11 @@ public class GUIMain extends JFrame {
         menu1 = new JMenu("Ver");
         menuBar.add(menu1);
         this.add(menuBar);
+        
+       
         MenuItemListener menuItemListener = new MenuItemListener();
         jmI1.addActionListener(menuItemListener);
-        this.getContentPane().add(BorderLayout.NORTH, menuBar);
+       this.getContentPane().add(BorderLayout.NORTH, menuBar);
         //this.getContentPane().add(BorderLayout.CENTER, jtpane);
         this.setVisible(true);
     }

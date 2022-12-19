@@ -153,6 +153,5 @@ public class ClienteDAO implements ClienteDaoI {
 
     @Override
     public void reportarCliente() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 }
