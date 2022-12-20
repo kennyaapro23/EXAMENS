@@ -14,7 +14,7 @@ import pe.edu.upeu.app.modelo.VentaTO;
 
 /**
  *
- * @author Lab-Software
+ * @author frans
  */
 public class VentaDao implements VentaDaoI{
     Conn instance=Conn.getInstance();
