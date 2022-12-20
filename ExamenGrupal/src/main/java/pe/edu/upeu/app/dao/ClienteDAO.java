@@ -13,6 +13,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Vector;
 import java.util.logging.Level;
+import pe.com.syscenterlife.autocomp.ModeloDataAutocomplet;
 import pe.edu.upeu.app.dao.conx.Conn;
 import pe.edu.upeu.app.modelo.ClienteTO;
 import pe.edu.upeu.app.util.ErrorLogger;
@@ -153,5 +154,10 @@ public class ClienteDAO implements ClienteDaoI {
 
     @Override
     public void reportarCliente() {
+    }
+
+    @Override
+    public List<ModeloDataAutocomplet> listAutoComplet(String filter) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 }
