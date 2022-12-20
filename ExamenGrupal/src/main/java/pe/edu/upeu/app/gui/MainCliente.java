@@ -16,6 +16,7 @@ import pe.edu.upeu.app.dao.ClienteDAO;
 import pe.edu.upeu.app.dao.ClienteDaoI;
 import pe.edu.upeu.app.modelo.ClienteTO;
 import pe.edu.upeu.app.util.MsgBox;
+
 enum TIPOCLXIENTE {
     Natural, General, Juridico
 };

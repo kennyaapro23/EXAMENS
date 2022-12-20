@@ -13,7 +13,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Vector;
 import pe.com.syscenterlife.autocomp.ModeloDataAutocomplet;
-import pe.edu.upeu.app.dao.conx.ConnS;
+import pe.edu.upeu.app.dao.conx.Conn;
+
 import pe.edu.upeu.app.modelo.CategoriaTO;
 import pe.edu.upeu.app.modelo.MarcaTO;
 import pe.edu.upeu.app.modelo.ProductoTO;
@@ -33,7 +34,7 @@ public class ProductoDAO implements ProductoDaoI{
     ResultSet rs = null;
 
     public ProductoDAO() {
-         connection = ConnS.getInstance().getConnection();
+         connection = Conn.getInstance().getConnection();
     }
     
     
