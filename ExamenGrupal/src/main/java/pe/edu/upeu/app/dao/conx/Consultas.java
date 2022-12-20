@@ -25,7 +25,7 @@ public class Consultas {
         {
             st = conexion.createStatement();
             int rs = st.executeUpdate(sql);
-            JOptionPane.showMessageDialog(null, "Guardado correctamente");
+            JOptionPane.showMessageDialog(null, "Guardado correctamente Si");
         }catch(SQLException e)
         {
             System.out.println(e);
