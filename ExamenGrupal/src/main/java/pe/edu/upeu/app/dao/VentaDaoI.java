@@ -10,7 +10,7 @@ import pe.edu.upeu.app.modelo.VentaTO;
 
 /**
  *
- * @author Lab-Software
+ * @author frans
  */
 public interface VentaDaoI {
     public int createVenta(VentaTO to);
