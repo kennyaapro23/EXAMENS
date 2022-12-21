@@ -23,6 +23,8 @@ public class GUIMain extends JFrame {
     JMenuBar menuBar;
     JMenu menu1;
     JMenuItem jmI1;
+    JMenuItem jmI2; //Agregado
+    JMenuItem jmI3; //Agregado
     JTabbedPane jtpane;
     JPanel jp;
     JScrollPane scrollPane;
@@ -34,18 +36,33 @@ public class GUIMain extends JFrame {
         menuBar = new JMenuBar();
         menu1 = new JMenu("Archivo");
         jmI1 = new JMenuItem("Abrir");
-        menuBar.add(menu1);
+        jmI2 = new JMenuItem("Adm. Cliente");//Agregado
+        jmI3=new JMenuItem("Producto");
         menu1.add(jmI1);
+        menu1.add(jmI2);//Agregado
+        menu1.add(jmI3);//Agregado
+        menuBar.add(menu1);
         menu1 = new JMenu("Ver");
         menuBar.add(menu1);
         this.add(menuBar);
-        
-       
+        jtpane = new JTabbedPane();//agregado
         MenuItemListener menuItemListener = new MenuItemListener();
         jmI1.addActionListener(menuItemListener);
-       this.getContentPane().add(BorderLayout.NORTH, menuBar);
+        jmI2.addActionListener(menuItemListener);//ecuchar la accion
+        jmI3.addActionListener(menuItemListener);//ecuchar la accion
+
+        this.getContentPane().add(BorderLayout.NORTH, menuBar);
         //this.getContentPane().add(BorderLayout.CENTER, jtpane);
-        this.setVisible(true);
+        //this.setVisible(true);
+        
+        MainVentas mv= new MainVentas();
+        scrollPane = new JScrollPane(mv);
+        scrollPane.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_AS_NEEDED);
+        scrollPane.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED);
+        jtpane.add("G. Ventas",scrollPane);
+
+        this.add(BorderLayout.CENTER, jtpane);        
+        
     }
 
     class MenuItemListener implements ActionListener {
@@ -55,14 +72,9 @@ public class GUIMain extends JFrame {
             System.out.println("pasa por aqui");
             Container contai = GUIMain.this.getContentPane();
             if (e.getSource() == jmI1) {
-                jtpane = new JTabbedPane();
-                MainCliente mc = new MainCliente();
-                
-                //jtpane.add("Gestionar cliente", mc);
-                scrollPane = new JScrollPane(mc);
-                scrollPane.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_AS_NEEDED);
-                scrollPane.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED);
-                jtpane.add("Adm. Cliente", scrollPane);
+                jtpane.removeAll();//remueve todo el contenido
+                jp = new JPanel();
+                jtpane.add("Prueba", jp);
                 jp = new JPanel();
                 jtpane.add("Preuba 2", jp);
                 JPanel pp = new JPanel();
@@ -84,7 +96,50 @@ public class GUIMain extends JFrame {
                 contai.validate();
                 contai.repaint();
             }
+
+            if (e.getSource() == jmI2) {
+                System.out.println("Holas");
+                jtpane.removeAll();
+
+                MainCliente mc= new MainCliente();
+                scrollPane = new JScrollPane(mc);
+                scrollPane.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_AS_NEEDED);
+                scrollPane.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED);
+                jtpane.add("Adm. Cliente",scrollPane);
+                
+                MainVentas mv= new MainVentas();
+                scrollPane = new JScrollPane(mv);
+                scrollPane.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_AS_NEEDED);
+                scrollPane.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED);
+                jtpane.add("G. Ventas",scrollPane);
+                
+                ReporteVenta rv= new ReporteVenta();
+                
+                jtpane.add("R. Ventas",rv);
+                
+                //jtpane.add("Prueba", mc);
+                //jtpane.add("dd", new JPanel());  
+                contai.add(BorderLayout.CENTER, jtpane);
+                //contai.remove(jtpane);
+                //contai.revalidate();
+                contai.invalidate();
+                contai.validate();
+
+            }
+            
+            if (e.getSource() == jmI3) {
+                jtpane.removeAll();
+
+                MainProducto mp= new MainProducto();
+                scrollPane = new JScrollPane(mp);
+                scrollPane.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_AS_NEEDED);
+                scrollPane.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED);
+                jtpane.add("Adm. Producto",scrollPane);
+                contai.add(BorderLayout.CENTER, jtpane);
+                contai.invalidate();
+                contai.validate();
+            }
+
         }
     }
-
 }
