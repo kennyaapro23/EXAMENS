@@ -45,11 +45,12 @@ public class Login extends javax.swing.JFrame {
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setResizable(false);
         Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
- 
+
         this.setLocationRelativeTo(null);
 
     }
     UsuarioTO uTO = new UsuarioTO();
+
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -199,18 +200,18 @@ public class Login extends javax.swing.JFrame {
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         String busqueda_usuario = uTO.BuscarUsuarioRegistrado(txtUsuario.getText(), txtClave.getText());
 
-        if(txtUsuario.getText().equals("root") && txtClave.getText().equals("root")){
+        if (txtUsuario.getText().equals("root") && txtClave.getText().equals("root")) {
             JOptionPane.showMessageDialog(this, "Bienvenido iniciaste como root (Administrador)");
             GUIMain guiMain = new GUIMain();
             guiMain.setVisible(true);
             this.dispose();
-        }else if (busqueda_usuario.equals("Usuario encontrado")){
+        } else if (busqueda_usuario.equals("Usuario encontrado")) {
             String busqueda_nombre = uTO.buscarnombre(txtUsuario.getText());
-            
+
             GUIMain guiMain = new GUIMain();
             guiMain.setVisible(true);
             this.dispose();
-        }else{
+        } else {
             JOptionPane.showMessageDialog(this, "Usuario no registrado, favor de crear usuario");
         }
     }//GEN-LAST:event_jButton2ActionPerformed
@@ -230,7 +231,7 @@ public class Login extends javax.swing.JFrame {
     private void BRegistrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BRegistrarActionPerformed
         // TODO add your handling code here:
         this.setVisible(false);
-        RegistroLogin f1= new RegistroLogin();
+        RegistroLogin f1 = new RegistroLogin();
         f1.setVisible(true);
     }//GEN-LAST:event_BRegistrarActionPerformed
 
