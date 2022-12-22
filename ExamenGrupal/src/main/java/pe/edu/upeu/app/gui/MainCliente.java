@@ -118,7 +118,7 @@ public class MainCliente extends javax.swing.JPanel {
         setVerifyInputWhenFocusTarget(false);
         setLayout(null);
 
-        jPanel1.setBackground(new java.awt.Color(204, 204, 204));
+        jPanel1.setBackground(new java.awt.Color(255, 255, 0));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jTextField1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -141,16 +141,17 @@ public class MainCliente extends javax.swing.JPanel {
         jLabel6.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 3, true));
         jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 50, -1, -1));
 
-        jLabel7.setBackground(new java.awt.Color(0, 51, 153));
+        jLabel7.setBackground(new java.awt.Color(255, 255, 153));
+        jLabel7.setForeground(new java.awt.Color(255, 255, 204));
         jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/qwerty.jpeg"))); // NOI18N
         jLabel7.setRequestFocusEnabled(false);
         jLabel7.setVerifyInputWhenFocusTarget(false);
-        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, -10, 990, 140));
+        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 810, 130));
 
         add(jPanel1);
         jPanel1.setBounds(0, 0, 970, 120);
 
-        jPanel2.setBackground(new java.awt.Color(153, 153, 153));
+        jPanel2.setBackground(new java.awt.Color(255, 255, 51));
 
         jPanel3.setBackground(new java.awt.Color(0, 0, 204));
 

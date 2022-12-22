@@ -30,7 +30,7 @@
 				<textElement>
 					<font isBold="true"/>
 				</textElement>
-				<text><![CDATA[Comprobante de Venta Techno Center]]></text>
+				<text><![CDATA[Comprobante de Venta]]></text>
 			</staticText>
 		</band>
 	</title>
@@ -38,42 +38,35 @@
 		<band height="35" splitType="Stretch"/>
 	</pageHeader>
 	<columnHeader>
-		<band height="24" splitType="Stretch"/>
+		<band height="24" splitType="Stretch">
+			<staticText>
+				<reportElement x="56" y="4" width="100" height="20" uuid="c5210ea6-ec76-414b-8f54-28552f772819"/>
+				<text><![CDATA[Precio Base]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="156" y="4" width="100" height="20" uuid="28768f29-9527-48ad-9f61-ea9c7d4437a8"/>
+				<text><![CDATA[IGV]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="256" y="4" width="100" height="20" uuid="52ecc266-7417-43a8-b021-0b1986c16fc0"/>
+				<text><![CDATA[Precio Total]]></text>
+			</staticText>
+		</band>
 	</columnHeader>
 	<detail>
 		<band height="125" splitType="Stretch">
 			<textField>
-				<reportElement x="44" y="43" width="100" height="20" uuid="c96bdf5a-3093-4d25-8a2a-cbd7a99b7d88"/>
+				<reportElement x="56" y="0" width="100" height="20" uuid="c96bdf5a-3093-4d25-8a2a-cbd7a99b7d88"/>
 				<textFieldExpression><![CDATA[""+$F{preciobase}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="156" y="43" width="100" height="20" uuid="51654e42-9daf-4c1b-9bc0-17cedb80cf4c"/>
+				<reportElement x="153" y="2" width="100" height="20" uuid="51654e42-9daf-4c1b-9bc0-17cedb80cf4c"/>
 				<textFieldExpression><![CDATA[""+$F{igv}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="281" y="43" width="100" height="20" uuid="7cf2e12e-28f4-4380-8964-a65b4e85a23b"/>
+				<reportElement x="256" y="0" width="100" height="20" uuid="7cf2e12e-28f4-4380-8964-a65b4e85a23b"/>
 				<textFieldExpression><![CDATA[""+$F{preciototal}]]></textFieldExpression>
 			</textField>
-			<image>
-				<reportElement x="0" y="-143" width="196" height="119" uuid="5b716bf5-3994-4b55-9e58-217eedb3d6de"/>
-				<imageExpression><![CDATA["D:\\MI GITHUB\\ProyectoFinal\\ExamenGrupal\\src\\main\\resources\\LG2.jpg"]]></imageExpression>
-			</image>
-			<staticText>
-				<reportElement x="44" y="0" width="100" height="20" uuid="c5210ea6-ec76-414b-8f54-28552f772819"/>
-				<text><![CDATA[Precio Base]]></text>
-			</staticText>
-			<staticText>
-				<reportElement x="156" y="0" width="100" height="20" uuid="28768f29-9527-48ad-9f61-ea9c7d4437a8"/>
-				<text><![CDATA[IGV]]></text>
-			</staticText>
-			<staticText>
-				<reportElement x="281" y="0" width="100" height="20" uuid="52ecc266-7417-43a8-b021-0b1986c16fc0"/>
-				<text><![CDATA[Precio Total]]></text>
-			</staticText>
-			<image>
-				<reportElement x="108" y="100" width="285" height="150" uuid="79c9c8bc-03b4-428b-ab44-1412be63de73"/>
-				<imageExpression><![CDATA["D:\\MI GITHUB\\ProyectoFinal\\ExamenGrupal\\jasper\\WhatsApp Image 2022-12-22 at 1.43.10 PM.jpeg"]]></imageExpression>
-			</image>
 		</band>
 	</detail>
 	<columnFooter>

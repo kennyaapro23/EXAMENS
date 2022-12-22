@@ -2,7 +2,7 @@
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" language="groovy" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="682c8156-6522-44f2-8841-4bccbddcaecf">
 	<property name="ireport.zoom" value="1.0"/>
 	<property name="ireport.x" value="0"/>
-	<property name="ireport.y" value="0"/>
+	<property name="ireport.y" value="48"/>
 	<style name="table">
 		<box>
 			<pen lineWidth="1.0" lineColor="#000000"/>
@@ -200,8 +200,12 @@
 	</background>
 	<title>
 		<band height="79" splitType="Stretch">
+			<image>
+				<reportElement x="16" y="0" width="122" height="79" uuid="9f44fa72-4e0e-43e6-b36a-98336805043c"/>
+				<imageExpression><![CDATA["C:\\Users\\ALEXCJ\\Desktop\\nueva prueba\\VentasGYMProyectoFinal\\ProyectoVentasGX\\jasper\\cronos.jpg"]]></imageExpression>
+			</image>
 			<staticText>
-				<reportElement x="201" y="12" width="231" height="40" uuid="95dd0ddd-1d53-442e-9b41-61a21e4bedb2"/>
+				<reportElement x="171" y="12" width="231" height="40" uuid="95dd0ddd-1d53-442e-9b41-61a21e4bedb2"/>
 				<textElement>
 					<font size="24"/>
 				</textElement>
@@ -210,10 +214,6 @@
 			<line>
 				<reportElement x="171" y="50" width="228" height="2" uuid="6ac7d8ec-df16-45a4-8dcd-e304f86f3354"/>
 			</line>
-			<image>
-				<reportElement x="0" y="-11" width="171" height="147" uuid="63db6dde-a01a-4cd5-8ce3-368557f4b199"/>
-				<imageExpression><![CDATA["D:\\MI GITHUB\\ProyectoFinal\\ExamenGrupal\\jasper\\WhatsApp Image 2022-12-22 at 1.28.48 PM.jpeg"]]></imageExpression>
-			</image>
 		</band>
 	</title>
 	<pageHeader>

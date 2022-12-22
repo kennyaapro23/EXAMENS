@@ -200,7 +200,7 @@ public class Login extends javax.swing.JFrame {
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         String busqueda_usuario = uTO.BuscarUsuarioRegistrado(txtUsuario.getText(), txtClave.getText());
 
-        if (txtUsuario.getText().equals("root") && txtClave.getText().equals("root")) {
+        if (txtUsuario.getText().equals("qwe") && txtClave.getText().equals("rqwe")) {
             JOptionPane.showMessageDialog(this, "Bienvenido iniciaste como root (Administrador)");
             GUIMain guiMain = new GUIMain();
             guiMain.setVisible(true);
@@ -229,7 +229,9 @@ public class Login extends javax.swing.JFrame {
     }//GEN-LAST:event_txtClaveActionPerformed
 
     private void BRegistrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BRegistrarActionPerformed
-
+        this.setVisible(false);
+        RegistroLogin f1 = new RegistroLogin();
+        f1.setVisible(true);
     }//GEN-LAST:event_BRegistrarActionPerformed
 
     /**
