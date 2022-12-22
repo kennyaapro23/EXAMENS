@@ -15,8 +15,7 @@ public class Conn {
     public static final String DEFAULT_DATE_STRING_FORMAT_PE = "dd/MM/yyyy";
     public static final String DEFAULT_DATE_STRING_FORMAT = "yyyy-MM-dd HH:mm:ss";
     static Connection conn = null;
-    
-    //Abrir coneccion
+
     public static Connection connectSQLite() {
         try {
             Class.forName("org.sqlite.JDBC");
@@ -30,7 +29,7 @@ public class Conn {
         }
         return conn;
     }
-    //Cerrar coneccion
+
     public static void closeSQLite(Connection conn) {
         try {
             if (conn != null) {
@@ -40,15 +39,17 @@ public class Conn {
             ex.printStackTrace();
         }
     }
-    public static void main(String[] args) {
+
+    /*public static void main(String[] args) {
         connectSQLite();
-    }
-
-    public static Conn getInstance() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
-
-    public Connection getConnection() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
+        try ( PreparedStatement stmt = connectSQLite().prepareStatement("SELECT * FROM cliente")) {
+            ResultSet rs = stmt.executeQuery();
+            while (rs.next()) {
+                System.out.println(rs.getString("nombrers")+"\t"+rs.getString("dniruc"));
+            }
+        } catch (SQLException sqle) {
+            System.out.println("Error en la ejecución:"
+                    + sqle.getErrorCode() + " " + sqle.getMessage());
+        }
+    }*/
 }

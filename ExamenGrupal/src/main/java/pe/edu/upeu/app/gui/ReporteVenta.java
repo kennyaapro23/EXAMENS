@@ -18,7 +18,7 @@ import net.sf.jasperreports.engine.JasperReport;
 import net.sf.jasperreports.engine.design.JasperDesign;
 import net.sf.jasperreports.engine.xml.JRXmlLoader;
 import net.sf.jasperreports.swing.JRViewer;
-import pe.edu.upeu.app.dao.conx.Conn;
+import pe.edu.upeu.app.dao.conx.ConnS;
 
 /**
  *
@@ -38,7 +38,7 @@ public class ReporteVenta extends javax.swing.JPanel {
             jPanel2.removeAll();
             jPanel2.repaint();
             jPanel2.revalidate();
-            Conn instance = Conn.getInstance();
+            ConnS instance = ConnS.getInstance();
 
             HashMap param = new HashMap();
 
@@ -81,7 +81,7 @@ public class ReporteVenta extends javax.swing.JPanel {
         jButton1 = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
 
-        jPanel1.setBackground(new java.awt.Color(204, 255, 204));
+        jPanel1.setBackground(new java.awt.Color(204, 204, 255));
 
         jTextField1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -117,7 +117,7 @@ public class ReporteVenta extends javax.swing.JPanel {
                 .addGap(15, 15, 15))
         );
 
-        jPanel2.setBackground(new java.awt.Color(255, 255, 204));
+        jPanel2.setBackground(new java.awt.Color(204, 204, 204));
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);

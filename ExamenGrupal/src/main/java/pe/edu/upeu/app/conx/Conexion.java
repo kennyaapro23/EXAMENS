@@ -12,7 +12,7 @@ import java.sql.SQLException;
  *
  * @author HP
  */
-public class ConexionBD {
+public class Conexion {
     
     
     public static String url = "jdbc:sqlite:data/db_ventas.db";

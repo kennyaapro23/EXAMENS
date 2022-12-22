@@ -37,7 +37,7 @@ import pe.edu.upeu.app.dao.ProductoDAO;
 import pe.edu.upeu.app.dao.ProductoDaoI;
 import pe.edu.upeu.app.dao.VentaDao;
 import pe.edu.upeu.app.dao.VentaDaoI;
-import pe.edu.upeu.app.dao.conx.Conn;
+import pe.edu.upeu.app.dao.conx.ConnS;
 import pe.edu.upeu.app.modelo.CarritoTO;
 import pe.edu.upeu.app.modelo.ClienteTO;
 import pe.edu.upeu.app.modelo.VentaDetalleTO;
@@ -234,7 +234,7 @@ public class MainVentas extends javax.swing.JPanel {
         txtImporteTotal = new javax.swing.JTextField();
         jButton3 = new javax.swing.JButton();
 
-        jPanel1.setBackground(new java.awt.Color(204, 255, 204));
+        jPanel1.setBackground(new java.awt.Color(204, 204, 204));
 
         jLabel1.setText("DNI/RUC Cliente:");
 
@@ -296,7 +296,7 @@ public class MainVentas extends javax.swing.JPanel {
                 .addContainerGap(29, Short.MAX_VALUE))
         );
 
-        jPanel2.setBackground(new java.awt.Color(255, 204, 204));
+        jPanel2.setBackground(new java.awt.Color(204, 204, 204));
 
         jLabel4.setText("Producto:");
 
@@ -391,6 +391,7 @@ public class MainVentas extends javax.swing.JPanel {
 
         jPanel3.setBackground(new java.awt.Color(204, 204, 255));
 
+        jTable1.setBackground(new java.awt.Color(204, 204, 255));
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
@@ -418,7 +419,7 @@ public class MainVentas extends javax.swing.JPanel {
                 .addContainerGap())
         );
 
-        jPanel4.setBackground(new java.awt.Color(204, 255, 255));
+        jPanel4.setBackground(new java.awt.Color(204, 204, 204));
 
         jLabel10.setText("Precio Venta:");
 
@@ -532,7 +533,7 @@ public class MainVentas extends javax.swing.JPanel {
 
     private void runReport1(int idventa) {
         try {
-            Conn instance = Conn.getInstance();
+            ConnS instance = ConnS.getInstance();
             HashMap param = new HashMap();
             String imgen = getFile("upeulogo.png").getAbsolutePath(); 
              param.put("idventa", idventa);

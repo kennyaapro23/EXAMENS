@@ -229,10 +229,7 @@ public class Login extends javax.swing.JFrame {
     }//GEN-LAST:event_txtClaveActionPerformed
 
     private void BRegistrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BRegistrarActionPerformed
-        // TODO add your handling code here:
-        this.setVisible(false);
-        RegistroLogin f1 = new RegistroLogin();
-        f1.setVisible(true);
+
     }//GEN-LAST:event_BRegistrarActionPerformed
 
     /**

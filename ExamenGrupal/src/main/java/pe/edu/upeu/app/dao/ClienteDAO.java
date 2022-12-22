@@ -158,6 +158,24 @@ public class ClienteDAO implements ClienteDaoI {
 
     @Override
     public List<ModeloDataAutocomplet> listAutoComplet(String filter) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        List<ModeloDataAutocomplet> listarclientes = new ArrayList();
+        String sql = "SELECT * FROM cliente WHERE nombrers like ?";
+        try {
+            ps = connection.prepareStatement(sql);
+            ps.setString(1, filter + "%");
+            rs = ps.executeQuery();
+            while (rs.next()) {
+                ModeloDataAutocomplet data = new ModeloDataAutocomplet();
+                ModeloDataAutocomplet.TIPE_DISPLAY = "ID";
+                data.setIdx(rs.getString("dniruc"));
+                data.setNombreDysplay(rs.getString("nombrers"));
+                data.setOtherData(rs.getString("tipo"));
+                listarclientes.add(data);
+            }
+        } catch (SQLException e) {
+            System.out.println(e.toString());
+        }
+        return listarclientes;
     }
 }
+

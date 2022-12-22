@@ -9,12 +9,12 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.List;
-import pe.edu.upeu.app.dao.conx.Conn;
+import pe.edu.upeu.app.dao.conx.ConnS;
 import pe.edu.upeu.app.modelo.CarritoTO;
 
 
 public class CarritoDao implements CarritoDaoI{
-    Conn instance=Conn.getInstance();
+    ConnS instance=ConnS.getInstance();
     Connection coneccionx=instance.getConnection();
     PreparedStatement ps;
     ResultSet rs;

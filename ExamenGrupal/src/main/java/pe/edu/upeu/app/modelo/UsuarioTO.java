@@ -7,7 +7,7 @@ package pe.edu.upeu.app.modelo;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-import pe.edu.upeu.app.dao.conx.ConexionBD;
+import pe.edu.upeu.app.dao.conx.Conexion;
 
 /**
  *
@@ -15,7 +15,7 @@ import pe.edu.upeu.app.dao.conx.ConexionBD;
  */
 public class UsuarioTO {
 
-    public static ConexionBD conexcion = new ConexionBD();
+    public static Conexion conexcion = new Conexion();
 
     public static PreparedStatement sentencia_preparada;
     public static ResultSet resultado;
@@ -30,7 +30,7 @@ public class UsuarioTO {
         String sentencia_guardar = ("INSERT INTO usuario(nombre, apellido, usuario, clave) values (?,?,?,?)");
 
         try {
-            conexion = ConexionBD.conectar();
+            conexion = Conexion.conectar();
             sentencia_preparada = conexion.prepareStatement(sentencia_guardar);
             sentencia_preparada.setString(1, nombre);
             sentencia_preparada.setString(2, apellido);
@@ -50,7 +50,7 @@ public class UsuarioTO {
         String busqueda_nombre = null;
         Connection conexion = null;
         try {
-            conexion = ConexionBD.conectar();
+            conexion = Conexion.conectar();
             String sentencia_buscar = ("SELECT nombre, apellido FROM usuario WHERE usuario = '" + usuario + "'");
             sentencia_preparada = conexion.prepareStatement(sentencia_buscar);
             resultado = sentencia_preparada.executeQuery();
@@ -72,7 +72,7 @@ public class UsuarioTO {
         String busqueda_usuario = null;
         Connection conexion = null;
         try {
-            conexion = ConexionBD.conectar();
+            conexion = Conexion.conectar();
             String sentencia_buscar_usuario = ("SELECT nombre,usuario,clave FROM usuario WHERE usuario = '" + usuario + "' and clave='" + contraseña + "'");
             sentencia_preparada = conexion.prepareStatement(sentencia_buscar_usuario);
 

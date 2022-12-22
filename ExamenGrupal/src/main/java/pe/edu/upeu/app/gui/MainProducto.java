@@ -61,7 +61,7 @@ public class MainProducto extends javax.swing.JPanel {
         jLabel2 = new javax.swing.JLabel();
         comboBoxSuggestion2 = new pe.com.syscenterlife.comboauto.ComboBoxSuggestion();
 
-        jPanel1.setBackground(new java.awt.Color(204, 255, 204));
+        jPanel1.setBackground(new java.awt.Color(204, 204, 255));
 
         jLabel1.setText("Marca:");
 
