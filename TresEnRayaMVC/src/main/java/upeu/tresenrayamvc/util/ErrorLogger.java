@@ -37,7 +37,6 @@ public class ErrorLogger {
         }
         addCloseHandlersShutdownHook();
     }
-
     private static void addCloseHandlersShutdownHook() {
         Runtime.getRuntime().addShutdownHook(new Thread(()
                 -> {
@@ -61,3 +60,4 @@ public class ErrorLogger {
         }
     }
 }
+// Vanos Eg Gaaaaaaaaaaaaaa

@@ -1,13 +1,5 @@
-# EXAMEN_POO
-<em> # PROYECTO </em>
-<h1 align="center"> INTEGRANTES </h1>
+<p align="center">
+    <img src="https://github-profile-trophy.vercel.app/?username=YamoshiDev&theme=dracula&row=2&no-bg=true&column=3&margin-w=15&margin-h=15" />
+  </p>
 
-<ul>
-<li> KENNY AQUINO AMACHI </li>            <h1> Codigo Main Cliente  </h1>        
-<li> JHOEL HAIRTON APAZA QUISPE </li>     <h1> Diseño Main Cliente y login </h1>
-<li> FRAN FRANKLIN CALIZAYA APAZA </li>   <h1>Codigo base de datos </h1>
-<li> BISLEYN ARCE APAZA </li>             <h1>Codigo Login </h1>
-<ul>
-  
- <img src="https://github.com/kennyaapro23/EXAMEN_POO/blob/main/ExamenGrupal/src/main/resources/LG2.jpg">
-
+  <!-- Probando Ando - 1 -->
